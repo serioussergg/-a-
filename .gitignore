@@ -1,52 +1,20 @@
-# Prerequisites
-*.d
+#include <stdio.h>
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
-
-# Linker output
-*.ilk
-*.map
-*.exp
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+int main()
+{
+    int x1, y1;
+    int x2 = 0;
+    int y2 = 0;
+    x1 = 0;
+    y1 = 0;
+    printf("Введите координаты ладьи \n");
+    scanf("%d%d", &x1, &y1);
+    printf("Введите координаты чёрной пешки \n");
+    scanf("%d%d", &x2, &y2);
+    if  ( ( x1 == x2 ) || ( y1 == y2 ) )
+        printf("ладья может сбить пешку");
+    else
+        printf (" ладья не может срубить пешку");
+    
+    return 0;
+}
